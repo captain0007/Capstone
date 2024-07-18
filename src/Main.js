@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import introImage from './introImage.png'; // Path to your images
 import dish1 from './dish1.png';
 import dish2 from './dish2.png';
@@ -9,17 +9,20 @@ import testimonial3 from './testimonial3.png';
 import testimonial4 from './testimonial4.png';
 import contactImage from './contactImage.png';
 
+
+
 function Main() {
+    
+
     return (
         <main>
             {/* Intro */}
-            <section style={{ display: 'flex', alignItems: 'center', margin: '20px 0', backgroundColor:'#495E57' }}>
+            <section style={{ display: 'flex', alignItems: 'center', margin: '20px 0', backgroundColor: '#495E57' }}>
                 <div style={{ flex: 1, padding: '20px' }}>
-                    <h1 style={{ color:'#F4CE14' } }>Little Lemon</h1>
-                    <h4 style={{ color:'#FFFFFF'} }>Chicago</h4>
+                    <h1 style={{ color: '#F4CE14' }}>Little Lemon</h1>
+                    <h4 style={{ color: '#FFFFFF' }}>Chicago</h4>
                     <p style={{ color: '#FFFFFF' }}>We are a family owned Mediterranean restaurant,
                         focused on traditional recipes served with a modern twist..</p>
-                    <button style={{ backgroundColor:'#F4CE14' } }>Reserve a Table</button>
                 </div>
                 <div style={{ flex: 1 }}>
                     <img src={introImage} alt="Introduction" style={{ width: '100%' }} />
@@ -29,7 +32,7 @@ function Main() {
             {/* Special Dishes Section */}
             <section style={{ margin: '20px 0' }}>
                 <h2>Special Dishes</h2>
-                <button style={{ backgroundColor:'#F4CE14' } }>View Online Menu</button>
+                <button style={{ backgroundColor: '#F4CE14' }}>View Online Menu</button>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
                     <div style={{ flex: 1, padding: '10px' }}>
                         <img src={dish1} alt="Dish 1" style={{ width: '100%' }} />
@@ -47,7 +50,7 @@ function Main() {
             </section>
 
             {/* Testimonials Section */}
-            <section style={{ margin: '20px 0' , textAlign:"center"}}>
+            <section style={{ margin: '20px 0', textAlign: "center" }}>
                 <h1>Testimonials</h1>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
                     <div style={{ flex: 1, padding: '10px' }}>
@@ -71,9 +74,9 @@ function Main() {
             </section>
 
             {/* Contact Section */}
-            <section style={{ display: 'flex', alignItems: 'center', margin: '20px 0', backgroundColor:'#495E57' }}>
+            <section style={{ display: 'flex', alignItems: 'center', margin: '20px 0', backgroundColor: '#495E57' }}>
                 <div style={{ flex: 1, padding: '20px' }}>
-                    <h2 style={{ color:'#F4CE14'} }>Little Lemon</h2>
+                    <h2 style={{ color: '#F4CE14' }}>Little Lemon</h2>
                     <h4 style={{ color: '#FFFFFF' }} >Chicago</h4>
                     <p style={{ color: '#FFFFFF' }} >We are a family owned Mediterranean
                         restaurant,
